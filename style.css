@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   display: flex;
   justify-content: center;
@@ -5,21 +6,31 @@ body {
   height: 100vh;
   background: #cc2b5e;
   background: linear-gradient(to right, #cc2b5e, #753a88);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
   text-align: center;
+  padding: 20px;
 }
 
 .header_text {
-  font-family: "Nunito";
-  font-size: 50px;
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5rem; /* Responsive font size */
   font-weight: bold;
-  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .gif_container img {
@@ -27,22 +38,14 @@ body {
   height: auto;
 }
 
-#noButton {
-  position: absolute;
-  margin-left: 150px;
-  transition: 0.5s;
-  margin-top: 30px;
-}
-
-#yesButton {
-  position: absolute;
-  margin-right: 150px;
-  margin-top: 30px;
+#noButton, #yesButton {
+  position: relative;
+  margin: 10px;
 }
 
 .text {
-  font-family: "Nunito";
-  font-size: 25px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem; /* Responsive font size */
   font-weight: bold;
   color: white;
   text-align: center;
@@ -56,7 +59,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-left: 20px;
 }
 
 .btn {
@@ -66,7 +68,7 @@ body {
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem; /* Responsive font size */
   margin: 4px 2px;
   cursor: pointer;
   border: none;
@@ -75,28 +77,36 @@ body {
   box-shadow: 2px 2px 4px rgb(58, 57, 57);
 }
 
-
-
 .btn:hover {
   background-color: #ffffff;
   color: #017cff;
 }
 
-
-.gif_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 p {
   color: white;
-  margin-left: 50%;
 }
 
 p a {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 1rem; /* Responsive font size */
   font-weight: 600;
   opacity: 0.25;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header_text {
+    font-size: 2rem; /* Smaller font size for tablets and smaller screens */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Smaller font size for tablets and smaller screens */
+    padding: 12px 28px;
+  }
+
+  .text {
+    font-size: 1.2rem; /* Smaller font size for tablets and smaller screens */
+  }
+
+  p a {
+    font-size: 0.9rem; /* Smalle

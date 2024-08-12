@@ -3,11 +3,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-    background: #cc2b5e;
-    background: linear-gradient(
-      to right,
-      #cc2b5e,#753a88
-    );
+  background: #cc2b5e;
+  background: linear-gradient(to right, #cc2b5e, #753a88);
+}
+
+.container {
+  text-align: center;
+}
+
+.header_text {
+  font-family: "Nunito";
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gif_container img {
+  max-width: 100%;
+  height: auto;
 }
 
 #noButton {
@@ -21,18 +38,6 @@ body {
   position: absolute;
   margin-right: 150px;
   margin-top: 30px;
-}
-
-.header_text {
-  font-family: "Nunito";
-  font-size: 50px;
-  font-weight: bold;
-
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text {
@@ -67,23 +72,28 @@ body {
   border: none;
   border-radius: 12px;
   transition: background-color 0.3s ease;
-  box-shadow: 2px 2px 4px rgb(74, 73, 73);
+  box-shadow: 2px 2px 4px rgb(58, 57, 57);
 }
+
+
 
 .btn:hover {
   background-color: #ffffff;
   color: #017cff;
 }
 
+
 .gif_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 p {
   color: white;
   margin-left: 50%;
 }
+
 p a {
   color: rgb(255, 255, 255);
   font-size: 20px;

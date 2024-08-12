@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -9,14 +11,32 @@
         <h1 class="header_text">Yeeyy ! Finally</h1>
       </div>
       <div class="gif_container">
-        <img
-          src="oh-yeah.gif"
-          alt="Cute animated illustration"
-        />
+        <img src="oh-yeah.gif" alt="Cute animated illustration" />
       </div>
-      <button class="btn" id="yesButton" onclick="nextPage()">
+      <button class="btn" id="yesButton" onclick="showCalendar()">
         Let's Fix a Date
       </button>
+      <div id="calendarContainer" style="display: none; margin-top: 20px;">
+        <input type="date" id="datePicker" class="btn" />
+        <button class="btn" onclick="confirmDate()">Confirm</button>
+      </div>
     </div>
+
+    <script>
+      function showCalendar() {
+        document.getElementById("calendarContainer").style.display = "block";
+        document.getElementById("yesButton").style.display = "none";
+      }
+
+      function confirmDate() {
+        const selectedDate = document.getElementById("datePicker").value;
+        if (selectedDate) {
+          alert("Date fixed: " + selectedDate);
+          // You can add code here to save the selected date or navigate to another page
+        } else {
+          alert("Please select a date!");
+        }
+      }
+    </script>
   </body>
 </html>
